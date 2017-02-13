@@ -55,6 +55,10 @@ func (this *WordFile) unpunctuate(input string) string {
 }
 
 func (this *WordFile) Exclude(exclude ...string) *WordFile {
+	if this.exclusions == nil {
+		this.exclusions = make(map[string]struct{})
+	}
+
 	for _, x := range exclude {
 		this.exclusions[x] = struct{}{}
 	}

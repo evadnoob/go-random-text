@@ -12,7 +12,7 @@ Example:
 
 	word := wordfile.Random()
 
-	fmt.Printf("%s\n", wordfile.unpunctuate(word))
+	fmt.Printf("%s\n", word)
 
 
 ```
